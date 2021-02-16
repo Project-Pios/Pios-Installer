@@ -1,6 +1,6 @@
 from subprocess import call, Popen
 from tkinter import *
-from tkinter.messagebox import askyesno, showerror
+from tkinter.messagebox import askyesno, showerror, showinfo
 from getpass import getuser
 
 try:
@@ -16,6 +16,7 @@ root.geometry('400x400')
 
 def installs():
     hint['text'] = '下载中 / Installing'
+    showinfo(message='准备完成，现在下载\n\nFinished preparing, now installing')
     try:
         call('git clone https://github.com/AccessRetrieved/Project-Pios', cwd='/Users/{}/Desktop'.format(getuser()), shell=True)
         try:
