@@ -18,7 +18,7 @@ def installs():
     hint['text'] = '下载中 / Installing'
     showinfo(message='准备完成，现在下载\n\nFinished preparing, now installing')
     try:
-        call('git clone https://github.com/AccessRetrieved/Project-Pios', cwd='/Users/{}/Desktop'.format(getuser()), shell=True)
+        call('git clone https://github.com/Project-Pios/Project-Pios', cwd='/Users/{}/Desktop'.format(getuser()), shell=True)
         try:
             call('pip3 install -r r.txt', cwd='/Users/{}/Desktop/Project-Pios'.format(getuser()), shell=True)
         except:
